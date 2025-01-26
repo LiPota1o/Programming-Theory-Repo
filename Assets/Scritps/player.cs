@@ -6,7 +6,7 @@ public class player : MonoBehaviour
 {
     private int health = 100;
 
-    // Метод получения урона
+    // Method for taking damage
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -16,13 +16,13 @@ public class player : MonoBehaviour
         }
     }
 
-    // Метод получения текущего здоровья
+    // Method for getting player health
     public int GetHealth()
     {
         return health;
     }
 
-    // Метод смерти игрока
+    // Method for player's death
     private void Die()
     {
         Debug.Log("Player died!");

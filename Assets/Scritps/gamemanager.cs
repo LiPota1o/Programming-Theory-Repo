@@ -5,34 +5,34 @@ using UnityEngine.UIElements;
 
 public class gamemanager : MonoBehaviour
 {
-    // Список врагов
+    // List of enemies
     public List<enemy> enemies = new List<enemy>();
-    // Список оружия
+    // List of weapons
     public List<weapon> weapons = new List<weapon>();
 
     void Start()
     {
-        // Добавляем врагов в список
+        // Adding enemy to the list
         enemies.Add(new zombie());
         enemies.Add(new robot());
 
-        // Добавляем оружие в список
+        // Adding weapon to the list
         weapons.Add(new gun());
         weapons.Add(new bow());
     }
 
     void Update()
     {
-        // Демонстрация полиморфизма с врагами
+        // POLYMORPHISM for enemy
         foreach (enemy enemy in enemies)
         {
-            enemy.TakeDamage(10); // Все враги получат урон
+            enemy.TakeDamage(10); // All enemies take damage
         }
 
-        // Демонстрация полиморфизма с оружием
+        // POLYMORPHISM for weapon
         foreach (weapon weapon in weapons)
         {
-            weapon.Shoot(); // Все оружия выполнят выстрел
+            weapon.Shoot(); // All weapons shoot
         }
     }
 }

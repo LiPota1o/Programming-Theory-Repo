@@ -6,7 +6,7 @@ public class enemy : MonoBehaviour
 {
     protected int health = 50;
 
-    // Метод получения урона
+    // Method of enemy taking damage
     public virtual void TakeDamage(int damage)
     {
         health -= damage;
@@ -16,7 +16,7 @@ public class enemy : MonoBehaviour
         }
     }
 
-    // Метод смерти врага
+    // Method of enemy's death
     protected void Die()
     {
         Debug.Log("Enemy died!");
